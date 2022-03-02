@@ -1,12 +1,20 @@
 import React,{useState} from 'react';
 import Book from './components/Book';
 import bookList from './models/books.json';
+import BookList from './components/BookList';
+
 
 function App() {
   const [books] = useState(bookList);
-  return books.map(bookItem => <Book
-    book={bookItem}/>);
+  
+  return <BookList books={books} addBook= {addBook}/>;
+  
     
+}
+
+function addBook(title){
+  console.log(`The Book ${title} was clicked`)
+ 
 }
 
 export default App;
