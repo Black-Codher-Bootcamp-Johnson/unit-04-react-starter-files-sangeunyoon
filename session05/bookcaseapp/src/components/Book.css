@@ -12,3 +12,7 @@ dt {
   dd:not(:last-child):after {
     content: ", ";
   }
+  body {
+    background-color: bisque;
+    text-align: center;
+  }
